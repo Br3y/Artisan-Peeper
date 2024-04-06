@@ -1,25 +1,42 @@
-import React from 'react'
+import Container from "./Container"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
 
-
+import { Avatar } from "./ui/avatar"
 
 const AboutCard = ({image, name, job, email, contact, type}) => {
   return (
-    <div className='block h-64 w-full lg:w-[900px] p-5 dark:bg-slate-900 shadow-md rounded-xl border-[1px] mb-5'
-    >
-    <div className='flex justify-center items-center pb-4 border-b-[1px] border-black dark:border-white'>
-      <img className='h-28 rounded-full mr-4 border-2 bg-black dark:bg-indigo-500' src={image} alt='Profile'/>
-      <div>
-        <p className='text-wrap font-extrabold text-2xl'>{name}</p>
-        <p className='tracking-wide'>Applying for "{job}"</p>
-        <p className='tracking-wide font-extralight'>{type}</p>
+    <Container>
+      <Card>
+        <CardHeader>
+          <CardTitle>{name}</CardTitle>
+        </CardHeader>
+      </Card>
+      <div className="grid justify-center items-center">
+        <div className=' lg:w-[900px] p-5 dark:bg-slate-900 shadow-md rounded-xl border-[1px] my-5'
+        >
+        <div className='flex justify-center items-center pb-4 border-b-[1px] border-black dark:border-white'>
+          <img className='h-28 rounded-full mr-4 border-2 bg-black dark:bg-indigo-500' src={image} alt='Profile'/>
+          <div>
+            <p className='text-wrap font-extrabold text-2xl'>{name}</p>
+            <p className='tracking-wide'>Applying for {`${job}`}</p>
+            <p className='tracking-wide font-extralight'>{type}</p>
+          </div>
+        </div>
+        <h1 className='text-xl font-bold pt-3'>Contact:</h1>
+        <ul>
+          <li><b>Email:</b> {email}</li>
+          <li><b>Contact:</b> {contact}</li>
+        </ul>
+        </div>
       </div>
-    </div>
-    <h1 className='text-xl font-bold pt-3'>Contact:</h1>
-    <ul>
-      <li><b>Email:</b> {email}</li>
-      <li><b>Contact:</b> {contact}</li>
-    </ul>
-    </div>
+    </Container>
   )
 }
 

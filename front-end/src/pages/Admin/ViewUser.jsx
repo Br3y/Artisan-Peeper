@@ -18,9 +18,9 @@ Assessment -> Score for each assessment, and total
 const ViewUser = () => {
   return (
     <Container>
-      <div className='grid justify-center'>
+      <div className='grid justify-center px-2'>
         <div>
-          <h2 className='text-slate-500 underline pb-5 mt-7'><Link to="/dashboard"><FaArrowLeft className='inline mr-1'/>Go back to Dashboard</Link></h2>
+          <h2 className='text-slate-500 underline pb-5 mt-7'><Link to="/adminDashboard"><FaArrowLeft className='inline mr-1'/>Go back to Dashboard</Link></h2>
           <AboutCard image={DarkSmily} name='Emmanuel Fabella' job='Cybersecurity' email='emmanuelfabella606@gmail.com' contact='123456789' type="Full-time"/>
         </div>
         <CVEval rating="Depends"/>

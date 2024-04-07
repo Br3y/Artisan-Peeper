@@ -18,45 +18,17 @@ const invoices = [
     CV: "Passed",
     assessment: "Failed",
     name: "Fabella, Emmanuel T.",
-    totalAmount: "55%",
-  },
-  {
-    invoice: "INV002",
-    CV: "Passed",
-    assessment: "Failed",
-    name: "Fabella, Emmanuel T.",
-    totalAmount: "55%",
-  },
-  {
-    invoice: "INV003",
-    CV: "Pending",
-    assessment: "Failed",
-    name: "Raizen Vahn Cedrick Sanchez",
-    totalAmount: "25%",
-  },
-  {
-    invoice: "INV006",
-    CV: "Pending",
-    assessment: "Failed",
-    name: "Raizen Vahn Cedrick Sanchez",
-    totalAmount: "25%",
-  },
-  {
-    invoice: "INV009",
-    CV: "Pending",
-    assessment: "Failed",
-    name: "Raizen Vahn Cedrick Sanchez",
-    totalAmount: "25%",
+    totalAmount: "88%",
   }
 ]
  
 const TablePassing = () => {
   return (
-      <Table className="w-full md:w-full lg:w-[850px] relative right-5 p-0">
+      <Table className="w-full md:w-full lg:w-[850px p-0">
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="w-[100px]">Job</TableHead>
+            <TableHead className="w-[100px]">ID</TableHead>
             <TableHead className="w-[100px]">CV</TableHead>
             <TableHead className="w-[200px]">Name</TableHead>
             <TableHead className="w-[70px]">CV Rating</TableHead>
@@ -64,7 +36,7 @@ const TablePassing = () => {
         </TableHeader>
         <TableBody>
           {invoices.map((invoice) => (
-            <TableRow key={invoice.invoice}>
+            <TableRow key={invoice.invoice}  className="cursor-pointer">
               <TableCell className="font-medium">{invoice.invoice}</TableCell>
               <TableCell>{invoice.CV}</TableCell>
               <TableCell><Link to="/view-user">{invoice.name}</Link></TableCell>

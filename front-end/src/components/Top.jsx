@@ -17,46 +17,15 @@ const invoices = [
     CV: "Success",
     assessment: "Failed",
     name: "Fabella, Emmanuel T.",
-    totalAmount: "56/100",
+    totalAmount: "85/100",
   },
   {
     invoice: "INV002",
     CV: "Pending",
     assessment: "Failed",
     name: "Raizen Vahn Cedrick Sanchez",
-    totalAmount: "67/100",
-  },
-  {
-    invoice: "INV003",
-    CV: "Failed",
-    name: "Marcus Zach Lestat Guttierez Rancio",
-    assessment: "Success",
-    totalAmount: "85/100",
-  },
-  {
-    invoice: "INV004",
-    CV: "Success",
-    totalAmount: "56/100",
-    assessment: "Failed",
-  },
-  {
-    invoice: "INV005",
-    CV: "Success",
-    totalAmount: "56/100",
-    assessment: "Failed",
-  },
-  {
-    invoice: "INV006",
-    CV: "Pending",
-    totalAmount: "56/100",
-    assessment: "Success",
-  },
-  {
-    invoice: "INV007",
-    CV: "Failed",
-    totalAmount: "56/100",
-    assessment: "Pending",
-  },
+    totalAmount: "76/100",
+  }
 ]
  
 const Top = () => {

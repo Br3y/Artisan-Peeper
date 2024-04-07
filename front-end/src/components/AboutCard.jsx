@@ -8,15 +8,53 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+import {Link} from 'react-router-dom'
+
 import SoftSkillsRadialChart from "./charts/SoftSkillsRadialChart"
 import BigFiveRadialChart from "./charts/BigFiveRadialChart"
 import ResumeDonutChart from "./charts/ResumeDonutChart"
 import HiringMeterDonutChart from "./charts/HiringMeterDonutChart"
 
 const AboutCard = ({image, name, job, email, contact, type}) => {
+  const subject = encodeURIComponent('Congratulations! Invitation to Final Stage of Hiring Process');
+  const emailTemplate = encodeURIComponent(`
+  Dear ${name},
+  
+  I hope this email finds you well.
+  
+  I am pleased to inform you that you have successfully passed the assessment stage of our hiring process for the ${job} position. Congratulations on this achievement!
+  
+  Your skills, experience, and achievements have impressed our hiring team, and we believe you would be a valuable addition to our company.
+  
+  We would like to invite you to the final stage of the hiring process, where we will discuss the details of your onboarding and provide you with the opportunity to review and sign the job offer.
+  
+  The final stage will include:
+  
+  1. Onboarding Process Overview: We will provide you with an overview of our company's onboarding process, including important information about our culture, policies, and procedures.
+  
+  2. Job Offer Discussion: We will discuss the details of the job offer, including compensation, benefits, and any additional terms or conditions.
+  
+  3. Signing of Job Offer: Once all details have been reviewed and agreed upon, we will present you with the job offer for your review and signature.
+  
+  Please let us know your availability for the final stage of the hiring process. We are flexible and will do our best to accommodate your schedule.
+  
+  If you have any questions or require any additional information before the final stage, please feel free to contact me at +63 0920 123 4567.
+  
+  Once again, congratulations on your success so far, and we look forward to meeting with you to discuss the next steps.
+  
+  Best regards,
+  
+  John Craig
+  Human Resource
+  +63 0920 123 4567
+  John Doe
+  `)
+
+  const mailTemplate = `mailto:${email}?subject=${subject}&body=${emailTemplate}`
+
   return (
       <>
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 py-2">
           <Card>
             <CardHeader className="flex items-center justify-center md:justify-start sm:flex-col md:flex-row gap-8">
               <div className="grid justify-center items-center">
@@ -34,7 +72,7 @@ const AboutCard = ({image, name, job, email, contact, type}) => {
               <CardTitle>
                 Contact
               </CardTitle>
-              <p className="text-sm text-gray-200"><span className="text-gray-500 text-l">Email:</span> {email}</p>
+              <p className="text-sm text-gray-200"><span className="text-gray-500 text-l">Email:</span><Link to={mailTemplate}> {email}</Link></p>
               <p className="text-sm text-gray-200"><span className="text-gray-500 text-l">Phone:</span> {contact}</p>
             </CardHeader>
           </Card>
@@ -71,24 +109,6 @@ const AboutCard = ({image, name, job, email, contact, type}) => {
               </CardDescription>
             </CardHeader>
           </Card>
-        </div>
-        <div className="grid justify-center items-center">
-          <div className=' lg:w-[900px] p-5 dark:bg-slate-900 shadow-md rounded-xl border-[1px] my-5'
-          >
-          <div className='flex justify-center items-center pb-4 border-b-[1px] border-black dark:border-white'>
-            <img className='h-28 rounded-full mr-4 border-2 bg-black dark:bg-indigo-500' src={image} alt='Profile'/>
-            <div>
-              <p className='text-wrap font-extrabold text-2xl'>{name}</p>
-              <p className='tracking-wide'>Applying for {`${job}`}</p>
-              <p className='tracking-wide font-extralight'>{type}</p>
-            </div>
-          </div>
-          <h1 className='text-xl font-bold pt-3'>Contact:</h1>
-          <ul>
-            <li><b>Email:</b> {email}</li>
-            <li><b>Contact:</b> {contact}</li>
-          </ul>
-          </div>
         </div>
       </>
   )

@@ -23,7 +23,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
 
       <forms className="grid sm:grid-cols-1 lg:grid-cols-2 gap-x-3 gap-y-2 *:rounded-md">
 
-          <button className='flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-indigo-900 items-center'
+          <button className='text-start flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-slate-900 items-center'
             value="option1"
             onClick={handleOptionChange}
             onChange={selectedOption === 'option1'}
@@ -39,7 +39,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
               onChange={handleOptionChange}/>
           </button>
 
-          <button className='flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-indigo-900 items-center'
+          <button className='text-start flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-slate-900 items-center'
             value="option2"
             onClick={handleOptionChange}
             onChange={selectedOption === 'option2'}
@@ -56,7 +56,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
               />
           </button>
 
-          <button className='flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-indigo-900 items-center'
+          <button className='text-start flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-slate-900 items-center'
             value="option3"
             onClick={handleOptionChange}
             onChange={selectedOption === 'option3'}
@@ -73,7 +73,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
               />
           </button>
 
-          <button className='flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-indigo-900 items-center'
+          <button className='text-start flex justify-between px-3 py-1 border-[1px] border-slate-500 text-wrap bg-white hover:scale-105 hover:bg-indigo-500 duration-100 dark:bg-slate-900 items-center'
             value="option4"
             onClick={handleOptionChange}
             onChange={selectedOption === 'option4'}

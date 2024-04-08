@@ -29,10 +29,10 @@ const TablePassing = () => {
           {invoices
           .sort((a, b) => b.rating - a.rating)
           .map((invoice) => (
-            <TableRow key={invoice.invoice}  className="cursor-pointer">
+            <TableRow key={invoice.id}  className="cursor-pointer">
               <TableCell className="font-medium">{invoice.id}</TableCell>
               <TableCell>{invoice.CV}</TableCell>
-              <TableCell><Link to={`/view-user/${invoice.invoice}`}>{invoice.name}</Link></TableCell>
+              <TableCell><Link to={`/view-user/${invoice.id}`}>{invoice.name}</Link></TableCell>
               <TableCell className="[200px]">{invoice.rating}</TableCell>
             </TableRow>
           ))}

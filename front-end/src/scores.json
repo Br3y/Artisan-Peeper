@@ -1,50 +1,30 @@
 [
   {
     "id": "1",
-    "title": "Teamwork",
-    "score": "--",
-    "upto": "10"
+    "title": "Teamwork"
   },
   {
     "id": "2",
-    "title": "Problem Solving",
-    "score": "--",
-    "upto": "10"
+    "title": "Problem Solving"
   },
   {
     "id": "3",
-    "title": "Work Ethic",
-    "score": "--",
-    "upto": "10"
+    "title": "Work Ethic"
   },
   {
     "id": "4",
-    "title": "Interpersonal",
-    "score": "--",
-    "upto": "10"
+    "title": "Interpersonal"
   },
   {
     "id": "5",
-    "title": "Time Management",
-    "score": "--",
-    "upto": "10"
+    "title": "Time Management"
   },
   {
     "id": "6",
-    "title": "Adaptability",
-    "score": "--",
-    "upto": "10"
+    "title": "Adaptability"
   },
   {
     "id": "7",
-    "title": "Communication",
-    "score": "--",
-    "upto": "10"
-  },
-  {
-    "id": "8",
-    "title": "Cognitive Assessment",
-    "score": "--",
-    "upto": "10"
+    "title": "Communication"
   }
 ]

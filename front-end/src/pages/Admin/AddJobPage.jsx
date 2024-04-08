@@ -22,7 +22,7 @@ function AddJobPage({addJobSubmit}) {
   const [type, setType] = useState("Full-Time");
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
-  const [salary, setSalary] = useState("Under $50K");
+  const [salary, setSalary] = useState("Under P50K");
   const [companyName, setCompanyName] = useState("");
   const [companyDescription, setCompanyDescription] = useState("");
   const [contactEmail, setContactEmail] = useState("");
@@ -116,16 +116,16 @@ function AddJobPage({addJobSubmit}) {
                     value={salary}
                     onChange={(e) => setSalary(e.target.value)}
                   >
-                    <option value="Under $50K">Under $50K</option>
-                    <option value="$50K - 60K">$50K - $60K</option>
-                    <option value="$60K - 70K">$60K - $70K</option>
-                    <option value="$70K - 80K">$70K - $80K</option>
-                    <option value="$80K - 90K">$80K - $90K</option>
-                    <option value="$90K - 100K">$90K - $100K</option>
-                    <option value="$100K - 125K">$100K - $125K</option>
-                    <option value="$125K - 150K">$125K - $150K</option>
-                    <option value="$150K - 175K">$150K - $175K</option>
-                    <option value="$175K - 200K">$175K - $200K</option>
+                    <option value="Under $50K">Under P50K</option>
+                    <option value="$50K - 60K">P50K - P60K</option>
+                    <option value="$60K - 70K">P60K - P70K</option>
+                    <option value="$70K - 80K">P70K - P80K</option>
+                    <option value="$80K - 90K">P80K - P90K</option>
+                    <option value="$90K - 100K">P90K - P100K</option>
+                    <option value="$100K - 125K">P100K - P125K</option>
+                    <option value="$125K - 150K">P125K - P150K</option>
+                    <option value="$150K - 175K">P150K - P175K</option>
+                    <option value="$175K - 200K">P175K - P200K</option>
                     <option value="Over $200K">Over $200K</option>
                   </select>
                 </div>
@@ -180,6 +180,14 @@ function AddJobPage({addJobSubmit}) {
                     placeholder="Name of your project"
                     value={contactPhone}
                     onChange={(e) => setContactPhone(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="flex flex-col space-y-1.5">
+                  <Label htmlFor="name">Keywords</Label>
+                  <Textarea
+                    id="name"
+                    placeholder="Enter keywords for evaluation..."
                     required
                   />
                 </div>

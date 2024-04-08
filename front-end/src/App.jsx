@@ -39,7 +39,7 @@ function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(true);
   const [isAssessmentOpen, setIsAssessmentOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(true);
 
   // Add New Job
   const addJob = async (newJob) => {

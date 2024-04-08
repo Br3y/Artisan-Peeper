@@ -84,9 +84,8 @@ Sincerely,
   const onboardTemplate = `mailto:${email}?subject=${subject}&body=${onboardBody}`;
   const rejectTemplate = `mailto:${email}?subject=${rejectSubject}&body=${rejectionBody}`;
 
-  const [openAssessment, setOpenAssessment] = useState(false);
-  const [onboard, setOnboard] = useState(false);
-  const [reject, setReject] = useState(false);
+  const [openAssessment, setOpenAssessment] = useState(true);
+  const [onboard, setOnboard] = useState(true);
 
   const handleAssessment = () => {
     setOpenAssessment(!openAssessment);
@@ -104,7 +103,7 @@ Sincerely,
             <div className="grid justify-center items-center">
               <img
                 className="h-24 w-24 rounded-full"
-                src="https://images.unsplash.com/photo-1567095761054-7a02e69e5c43?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={'/profile/' + image}
               />
             </div>
             <div className="flex flex-col justify-center items-center md:items-start">

@@ -1,5 +1,6 @@
 import Container from "@/components/Container.jsx";
 import AreaCard from "@/components/AreaCard";
+import CognitiveCard from "@/components/CognitiveCard.jsx";
 import scores from "../../../scores.json";
 
 const Assessmentchoices = () => {
@@ -16,6 +17,8 @@ const Assessmentchoices = () => {
             {scores.map((scorez) => (
               <AreaCard key={scorez.id} scorez={scorez} />
             ))}
+
+            <CognitiveCard/>
           </div>
         </div>
       </Container>

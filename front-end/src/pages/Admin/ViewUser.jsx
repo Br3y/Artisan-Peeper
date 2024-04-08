@@ -16,6 +16,7 @@ Assessment -> Score for each assessment, and total
 */
 
 const ViewUser = () => {
+
   return (
     <Container>
       <div className='grid justify-center px-2'>

@@ -24,13 +24,13 @@ function AdminDashboard() {
             <TablePassing />
           </div>
           <div className="p-5 border-2 rounded-lg shadow-md">
-            <p className="text-xl trfont-bold mb-3">Passed Assessments</p>
+            <p className="text-xl trfont-bold mb-3">Top Candidates</p>
             <Top />
           </div>
         </div>
         <div className="flex justify-center items-center flex-col">
           <h1 className="block pl-5 font-bold text-4xl">
-            Applicants view
+            Applicants View
           </h1>
           <JobListing />
         </div>

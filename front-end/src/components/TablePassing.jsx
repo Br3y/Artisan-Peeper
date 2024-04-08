@@ -11,16 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import {Link} from 'react-router-dom'
-
-const invoices = [
-  {
-    invoice: "INV001",
-    CV: "Passed",
-    assessment: "Failed",
-    name: "Fabella, Emmanuel T.",
-    totalAmount: "88%",
-  }
-]
+import {invoices} from '../invoices.json'
  
 const TablePassing = () => {
   return (
@@ -35,12 +26,14 @@ const TablePassing = () => {
           </TableRow>
         </TableHeader>
         <TableBody>
-          {invoices.map((invoice) => (
+          {invoices
+          .sort((a, b) => b.rating - a.rating)
+          .map((invoice) => (
             <TableRow key={invoice.invoice}  className="cursor-pointer">
-              <TableCell className="font-medium">{invoice.invoice}</TableCell>
+              <TableCell className="font-medium">{invoice.id}</TableCell>
               <TableCell>{invoice.CV}</TableCell>
-              <TableCell><Link to="/view-user">{invoice.name}</Link></TableCell>
-              <TableCell className="[200px]">{invoice.totalAmount}</TableCell>
+              <TableCell><Link to={`/view-user/${invoice.invoice}`}>{invoice.name}</Link></TableCell>
+              <TableCell className="[200px]">{invoice.rating}</TableCell>
             </TableRow>
           ))}
         </TableBody>

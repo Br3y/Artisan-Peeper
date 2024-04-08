@@ -31,8 +31,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
             > 
             <label className="mr-1" htmlFor='a1' name="AnswerA">A. {answerA}</label>
             <input 
-              type='radio' 
-              id='a1' 
+              type='radio'
               value="option1"
               checked={selectedOption === 'option1'}
               name="AnswerA"
@@ -48,7 +47,6 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
             <label className="mr-1" htmlFor='b1' name="AnswerB">B. {answerB}</label>
             <input 
               type='radio' 
-              id='b1'
               value="option2"
               checked={selectedOption === 'option2'}
               onChange={handleOptionChange}
@@ -64,8 +62,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
             > 
             <label className="mr-1" htmlFor='c1' name="AnswerC">C. {answerC}</label>
             <input 
-              type='radio' 
-              id='c1'
+              type='radio'
               value="option3"
               checked={selectedOption === 'option3'}
               onChange={handleOptionChange}
@@ -81,8 +78,7 @@ const Question = ({no, question, answerA, answerB, answerC, answerD, }) => {
             > 
             <label className="mr-1" htmlFor='d1' name="AnswerD">D. {answerD}</label>
             <input 
-              type='radio' 
-              id='d1'
+              type='radio'
               value="option4"
               checked={selectedOption === 'option4'}
               onChange={handleOptionChange}

@@ -47,9 +47,9 @@ function Register() {
   return (
     <div className="h-screen flex items-center justify-center">
       <div className="mx-auto max-w-sm">
-        <div className="text-xl">Sign Up</div>
+        <div className="text-xl text-center">Sign Up</div>
         <div>
-          <p>Enter your information to create an account</p>
+          <p className="text-muted-foreground text-sm text-center py-2 mb-2">Enter your information to create an account</p>
         </div>
         <form onSubmit={handleRegister}>
           <div className="grid gap-4">
@@ -122,7 +122,7 @@ function Register() {
         )}
         <div className="mt-4 text-center text-sm">
           Already have an account?{" "}
-          <span className="underline cursor-pointer">Sign in</span>
+          <Link to="/login"><span className="underline cursor-pointer">Sign in</span></Link>
         </div>
       </div>
     </div>

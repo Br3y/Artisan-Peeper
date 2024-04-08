@@ -38,7 +38,7 @@ import { ThemeProvider } from "./components/theme-provider.jsx";
 function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-  const [isAssessmentOpen, setIsAssessmentOpen] = useState(false);
+  const [isAssessmentOpen, setIsAssessmentOpen] = useState(true);
   const [isAdmin, setIsAdmin] = useState(true);
 
   // Add New Job
@@ -113,7 +113,7 @@ function App() {
                 <Route path='/dashboard' element={<AdminDashboard/>}/>
                 <Route path='/add-job' element={<AddJobPage addJobSubmit={addJob}/>}/>
                 <Route path="/edit-job/:id" element={<EditJobPage updateJobSubmit={updateJob}/>} loader={jobLoader}/>
-                <Route path='/view-user' element={<ViewUser/>}/>
+                <Route path='/view-user/:id' element={<ViewUser/>}/>
               </>
             </Route>
           </>

@@ -33,7 +33,7 @@ function Login() {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       if (user.uid === adminUid) {
-        window.location.href = '/adminDashboard'; 
+        window.location.href = '/dashboard'; 
       } else {
         setIsAdmin(false); 
         window.location.href = '/dashboard'; 
@@ -83,7 +83,7 @@ function Login() {
             </div>
           </form>
           <div className="mt-4 text-center text-sm">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link to="/register" className="underline">Sign up</Link>
           </div>
         </div>
@@ -94,7 +94,7 @@ function Login() {
           alt="Image"
           width="1920"
           height="1080"
-          className="h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
+          className="h-full w-full object-cover dark-mode-img"
         />
       </div>
     </div>

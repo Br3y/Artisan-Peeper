@@ -7,7 +7,11 @@
       "name": "Fabella, Emmanuel.",
       "rating": 95,
       "overallRating": 85,
-      "profile": "../assets/profile/Emman.jpg"
+      "pfp": "Emman.jpg",
+      "job": "Penetration Tester",
+      "type": "Part-Time",
+      "email": "emmanuelfabella606@gmail.com",
+      "contact": "093023432139"
     },
     {
       "id": 5212,
@@ -16,7 +20,11 @@
       "name": "Baarde, Ram",
       "rating": 86,
       "overallRating": 91,
-      "profile": "../assets/profile/Ram.jpg"
+      "pfp": "Ram.jpg",
+      "job": "Penetration Tester",
+      "type": "Fulltime",
+      "email": "ramchrist20@gmail.com",
+      "contact": "096023432139"
     },
     {
       "id": 7321,
@@ -25,7 +33,11 @@
       "name": "Miranda, Rhyu",
       "rating": 75,
       "overallRating": 82,
-      "profile": "../assets/profile/Rhyu.jpg"
+      "pfp": "Miranda.jpg",
+      "job": "Software Engineer",
+      "type": "Internship",
+      "email": "mirandarhyu@gmail.com",
+      "contact": "09202342139"
     },
     {
       "id": 4321,
@@ -34,7 +46,11 @@
       "name": "Kapares, Romnick",
       "rating": 43,
       "overallRating": 83,
-      "profile": "../assets/profile/Rhyu.jpg"
+      "pfp": "Kapares.jpg",
+      "job": "UI/UX Designer",
+      "type": "Full-Time",
+      "email": "romnickkapares@gmail.com",
+      "contact": "09849142139"
     }
   ]
 }

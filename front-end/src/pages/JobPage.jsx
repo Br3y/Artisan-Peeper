@@ -1,5 +1,5 @@
 import Container from "@/components/Container.jsx";
-import { useParams } from "react-router-dom";
+import { useParams, useLoaderData } from "react-router-dom";
 import { FaMapMarker, FaArrowLeft } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -24,24 +24,10 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 
-function JobPage({ deleteJob }) {
+function JobPage({deleteJob}) {
   const { id } = useParams();
+  const job = useLoaderData();
   const navigate = useNavigate();
-
-  // Simulated job data, replace with actual data fetching logic
-  const job = {
-    type: "Full-time",
-    title: "Software Engineer",
-    location: "New York, NY",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    salary: "$100,000 - $120,000",
-    company: {
-      name: "Example Company",
-      description: "A leading technology company...",
-      contactEmail: "info@example.com",
-      contactPhone: "(123) 456-7890",
-    },
-  };
 
   function onDeleteClick() {
     deleteJob(id);
@@ -51,7 +37,7 @@ function JobPage({ deleteJob }) {
 
   return (
     <Container>
-      <div className="py-4">
+      <div className="py-4 min-h-screen">
         <section>
           <div className="container py-6 px-6 mb-2">
             <Link
@@ -141,5 +127,10 @@ function JobPage({ deleteJob }) {
     </Container>
   );
 }
+const jobLoader = async ({ params }) => {
+  const res = await fetch(`/api/jobs/${params.id}`);
+  const data = await res.json();
+  return data;
+};
 
-export default JobPage;
+export { JobPage as default, jobLoader };

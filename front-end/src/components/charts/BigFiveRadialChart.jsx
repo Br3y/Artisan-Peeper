@@ -25,7 +25,7 @@ function BigFiveRadialChart() {
     datasets: [
       {
         label: "Big-5-Theory",
-        data: [100, 50, 100, 100, 100],
+        data: [80, 75, 60, 80, 85],
         fill: true,
         backgroundColor: "rgba(200, 100, 20, 0.3)",
         borderColor: "rgb(200, 100, 20)",

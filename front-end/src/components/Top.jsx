@@ -28,9 +28,9 @@ const Top = () => {
         .filter((invoice) => invoice.CV === "Passed" && invoice.isAssessmentDone)
         .sort((a, b) => b.overallRating - a.overallRating)
         .map((invoice) => (
-          <TableRow key={invoice.invoice}>
+          <TableRow key={invoice.id}>
             <TableCell className="font-medium">{invoice.id}</TableCell>
-            <TableCell><Link to={`/view-user/${invoice.invoice}`}>{invoice.name}</Link></TableCell>
+            <TableCell><Link to={`/view-user/${invoice.id}`}>{invoice.name}</Link></TableCell>
             <TableCell className="[200px]">{invoice.overallRating}</TableCell>
           </TableRow>
         ))}

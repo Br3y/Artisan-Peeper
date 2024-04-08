@@ -24,7 +24,7 @@ const invoices = [
  
 const TablePassing = () => {
   return (
-      <Table className="w-full md:w-full lg:w-[850px p-0">
+      <Table className="w-full md:w-full lg:w-[740px] p-0">
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
           <TableRow>

@@ -25,7 +25,7 @@ function SoftSkillsRadialChart() {
     datasets: [
       {
         label: "Soft Skill Assessment",
-        data: [100, 75, 100, 100, 100, 100, 100],
+        data: [80, 70, 40, 40, 20, 50, 70],
         fill: true,
         backgroundColor: "rgba(255, 99, 132, 0.2)",
         borderColor: "rgb(255, 99, 132)",

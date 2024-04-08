@@ -10,7 +10,7 @@ function ResumeDonutChart() {
     ],
     datasets: [{
       label: 'Resume Evaluation',
-      data: [80,20],
+      data: [75,25],
       backgroundColor: [
         'rgb(99, 102, 241)',
         'rgb(0, 0, 50)'

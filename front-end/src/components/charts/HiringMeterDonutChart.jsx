@@ -10,7 +10,7 @@ function HiringMeterDonutChart() {
     ],
     datasets: [{
       label: 'Resume Evaluation',
-      data: [80,20],
+      data: [82,18],
       backgroundColor: [
         'rgb(126, 222, 141, 1)',
         'rgb(0, 30, 5, 1)'

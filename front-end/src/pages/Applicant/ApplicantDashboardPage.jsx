@@ -1,11 +1,12 @@
 import JobListing from "@/components/JobListing.jsx";
 import Container from "@/components/Container.jsx";
+import Searchbar from "@/components/Searchbar";
 
 function ApplicantDashboardPage() {
-  console.log();
 
   return (
     <Container>
+      <Searchbar placeholderVal={"Search a Job"}/>
       <JobListing/>
     </Container>
   )

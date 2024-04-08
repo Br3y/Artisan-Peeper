@@ -3,21 +3,20 @@ import Container from "@/components/Container.jsx";
 import Total from "@/components/Total";
 import TablePassing from "@/components/TablePassing.jsx";
 import Top from "@/components/Top.jsx";
+import Searchbar from "@/components/Searchbar";
 
 function AdminDashboard() {
   return (
     <Container>
-      <div className="flex justify-center items-center flex-col py-2">
-        <div className="flex justify-between mx-4 flex-wrap ">
-          <h1 className="font-bold text-2xl mt-5">Welcome back, Admin.</h1>
-        </div>
+      <Searchbar placeholderVal={"Search Applicant"}/>
+      <div className="flex justify-center items-center flex-col">
         <div className="flex flex-wrap justify-center items-center gap-6 my-3">
-          <Total title="Total Applicants" total="163" added="+" />
-          <Total title="CV Passing Applicants" total="106" added="+" />
-          <Total title="Passed Assessment" total="56" added="+" />
-          <Total title="Total Passing" total="23" added="+" />
+          <Total title="Total Applications" total="1" added="+" />
+          <Total title="Successful Evaluation" total="1" added="+" />
+          <Total title="Passed Assessment" total="1" added="+" />
+          <Total title="Talents Onboard" total="23" added="+" />
         </div>
-        <div className="flex justify-center gap-7 flex-wrap my-7">
+        <div className="flex justify-center gap-7 flex-wrap my-7 py-5">
           <div className="p-5 border-2 rounded-lg shadow-md flex flex-col justify-center items-center">
             <p className="text-xl font-bold mb-5 text-center">
               Passed Curriculum Vitae&apos;s
@@ -29,8 +28,8 @@ function AdminDashboard() {
             <Top />
           </div>
         </div>
-        <div className="flex justify-center items-center flex-col mt-3">
-          <h1 className="block pl-5 mb-5 font-bold text-4xl">
+        <div className="flex justify-center items-center flex-col">
+          <h1 className="block pl-5 font-bold text-4xl">
             Applicants view
           </h1>
           <JobListing />

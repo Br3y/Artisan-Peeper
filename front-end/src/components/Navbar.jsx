@@ -82,7 +82,7 @@ function Navbar({ isAssessmentOpen, isAdmin }) {
         </div>
         {/* Dashboard link */}
         <NavLink
-          to={isAdmin ? "/adminDashboard" : "/dashboard"}
+          to={isAdmin ? "/dashboard" : "/dashboard"}
           className={linkClass}
         >
           <HiMagnifyingGlass className="text-gray-100" />
@@ -152,6 +152,7 @@ function Navbar({ isAssessmentOpen, isAdmin }) {
                         id="name"
                         type="text"
                         className="col-span-3"
+                        value="Rhyu Miranda"
                         required
                       />
                     </div>
@@ -163,6 +164,7 @@ function Navbar({ isAssessmentOpen, isAdmin }) {
                         id="email"
                         type="email"
                         className="col-span-3"
+                        placeholder="mirandarhyu@gmail.com"
                         required
                       />
                     </div>
